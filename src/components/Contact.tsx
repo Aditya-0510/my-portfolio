@@ -4,8 +4,15 @@ import React, { useState } from "react";
 import { Mail, User, MessageSquare, Send, AtSign, Loader } from "lucide-react";
 import axios from "axios";
 
+type FormData = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     subject: "",
@@ -15,11 +22,15 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
+  // Typed for input and textarea change events
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  // Typed for form submit event
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.message) {
@@ -42,20 +53,22 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-gray-300">
+    <section className="w-full py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-gray-300">
       <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-8 text-white">Get In Touch</h2>
 
         <div className="bg-gray-900 rounded-lg shadow-xl p-8 md:p-10 border border-gray-700">
           {submitted ? (
-            <p className="text-center text-green-400 text-lg">✅ Thank you! Your message has been sent.</p>
+            <p className="text-center text-green-400 text-lg">
+              ✅ Thank you! Your message has been sent.
+            </p>
           ) : (
             <form onSubmit={handleSubmit}>
-              
               <div className="grid md:grid-cols-2 gap-6">
-                
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-1">Name</label>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-1">
+                    Name
+                  </label>
                   <div className="relative">
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
                     <input
@@ -70,9 +83,10 @@ const Contact = () => {
                   </div>
                 </div>
 
-                
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-1">Email</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-1">
+                    Email
+                  </label>
                   <div className="relative">
                     <AtSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
                     <input
@@ -88,9 +102,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              
               <div className="mt-6">
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-400 mb-1">Subject</label>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-400 mb-1">
+                  Subject
+                </label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
                   <input
@@ -104,9 +119,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              
               <div className="mt-6">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-1">Message</label>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-1">
+                  Message
+                </label>
                 <div className="relative">
                   <MessageSquare className="absolute left-3 top-5 transform -translate-y-1/2 text-gray-500" size={20} />
                   <textarea
@@ -121,7 +137,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              
               <div className="mt-6">
                 <button
                   type="submit"
