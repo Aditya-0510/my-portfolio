@@ -1,5 +1,5 @@
 import Image from "next/image";
-import photo from "@/public/photo.jpg"; // Make sure this path matches your project structure
+import photo from "@/public/photo.jpg"; 
 
 const About = () => {
   return (
@@ -12,7 +12,7 @@ const About = () => {
           About Me
         </h2>
         <div className="md:flex items-center gap-8">
-          {/* Image Section */}
+
           <div className="md:w-1/3 mb-8 md:mb-0 flex justify-center">
             <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-blue-400 shadow-lg">
               <Image
@@ -26,12 +26,11 @@ const About = () => {
             </div>
           </div>
 
-          {/* Text Section */}
           <div className="md:w-2/3">
             <p className="text-lg mb-4 leading-relaxed">
-              Hi there! I'm a passionate web developer specializing in building
-              modern, responsive, and visually appealing websites. With
-              expertise in{" "}
+              Hi there! I&apos;m a passionate web developer specializing in
+              building modern, responsive, and visually appealing websites.
+              With expertise in{" "}
               <span className="text-blue-400">React, Tailwind CSS</span>, and
               cutting-edge technologies, I bring designs to life.
             </p>
@@ -42,14 +41,13 @@ const About = () => {
               with like-minded individuals.
             </p>
 
-            {/* Contact Button */}
             <a
               href="https://www.linkedin.com/in/sai-aditya-10x/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-blue-500 text-white px-6 py-3 rounded-md font-medium shadow-lg transition duration-300 hover:bg-blue-600 hover:shadow-lg hover:scale-105"
             >
-              Let's Connect
+              Let&apos;s Connect
             </a>
           </div>
         </div>

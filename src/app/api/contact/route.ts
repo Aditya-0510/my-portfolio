@@ -1,12 +1,24 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+type ContactRequest = {
+  name?: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
 export async function POST(req: Request) {
   try {
-    const { name, email, subject, message } = await req.json();
+    const body: ContactRequest = await req.json();
+
+    const { name, email, subject, message } = body;
 
     if (!email || !subject || !message) {
-      return NextResponse.json({ message: "Missing required fields" }, { status: 400 });
+      return NextResponse.json(
+        { message: "Missing required fields" },
+        { status: 400 }
+      );
     }
 
     const transporter = nodemailer.createTransport({
@@ -28,8 +40,16 @@ export async function POST(req: Request) {
     console.log("Email sent:", info.response);
 
     return NextResponse.json({ message: "Email sent successfully" }, { status: 200 });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error(error);
-    return NextResponse.json({ message: "Error sending email", error: error.message }, { status: 500 });
+
+    // safely extract message
+    const message =
+      error instanceof Error ? error.message : "Unknown error occurred";
+
+    return NextResponse.json(
+      { message: "Error sending email", error: message },
+      { status: 500 }
+    );
   }
 }

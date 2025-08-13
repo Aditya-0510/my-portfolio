@@ -10,14 +10,14 @@ const Navbar = () => {
     <nav className="sticky top-0 z-10 w-full bg-gray-900 shadow-md">
       <div className="w-full max-w-7xl mx-auto px-8 lg:px-24 md:px-16">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          
           <div className="flex items-center">
             <Link href="#hero" className="text-xl font-bold text-white hover:text-blue-400">
               Sai Aditya
             </Link>
           </div>
 
-          {/* Desktop menu */}
+          
           <div className="hidden md:flex items-center space-x-6">
             <Link href="#about" className="text-white hover:text-blue-400">About</Link>
             <Link href="#projects" className="text-white hover:text-blue-400">Projects</Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
             <Link href="#contact" className="text-white hover:text-blue-400">Contact</Link>
           </div>
 
-          {/* Mobile menu button */}
+          
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -56,7 +56,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
+        
         {isMenuOpen && (
           <div className="md:hidden bg-gray-800 rounded-lg shadow-md mt-2">
             <div className="px-4 pt-2 pb-3 space-y-2">

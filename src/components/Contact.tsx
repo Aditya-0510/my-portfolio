@@ -51,9 +51,9 @@ const Contact = () => {
             <p className="text-center text-green-400 text-lg">✅ Thank you! Your message has been sent.</p>
           ) : (
             <form onSubmit={handleSubmit}>
-              {/* Name & Email */}
+              
               <div className="grid md:grid-cols-2 gap-6">
-                {/* Name */}
+                
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-1">Name</label>
                   <div className="relative">
@@ -70,7 +70,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* Email */}
+                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-1">Email</label>
                   <div className="relative">
@@ -88,7 +88,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Subject */}
+              
               <div className="mt-6">
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-400 mb-1">Subject</label>
                 <div className="relative">
@@ -104,7 +104,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Message */}
+              
               <div className="mt-6">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-1">Message</label>
                 <div className="relative">
@@ -121,7 +121,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Submit Button */}
+              
               <div className="mt-6">
                 <button
                   type="submit"

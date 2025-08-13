@@ -11,7 +11,7 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4"
         >
-          Hi, I'm <span className="text-blue-400">Sai Aditya</span>
+          Hi, I&apos;m <span className="text-blue-400">Sai Aditya</span>
         </motion.h1>
 
         <motion.p
@@ -20,7 +20,7 @@ const Hero = () => {
           transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
           className="text-xl sm:text-2xl md:text-3xl mb-8 font-light"
         >
-          Web Developer & Competitive Programmer
+          Web Developer &amp; Competitive Programmer
         </motion.p>
 
         <div className="flex justify-center space-x-4">
