@@ -55,9 +55,9 @@ const Contact = () => {
   return (
     <section className="w-full py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-gray-300">
       <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-8 text-white">Get In Touch</h2>
+        <h2 className="text-4xl font-bold text-center mb-8 text-white font-mono">Get In Touch</h2>
 
-        <div className="bg-gray-900 rounded-lg shadow-xl p-8 md:p-10 border border-gray-700">
+        <div className="bg-gray-900 rounded-lg shadow-xl p-8 md:p-10 border border-gray-700 font-mono">
           {submitted ? (
             <p className="text-center text-green-400 text-lg">
               ✅ Thank you! Your message has been sent.
