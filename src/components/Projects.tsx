@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import LegalVizierImage from "@/public/Legal_Vizier_final.jpg";
 import ProxyPakkiImage from "@/public/Proxy_Pakki.jpg";
-import PortfolioImage from "@/public/portfolio.png";
+import SynapseImage from "@/public/synapse.png";
+import ChatImage from "@/public/chatapp.png";
+import HealthImage from "@/public/healthhacked.png";
 
 const Projects = () => {
   const projects = [
@@ -15,19 +17,37 @@ const Projects = () => {
         "A modern React-Native application for managing student attendance for University.",
       image: ProxyPakkiImage,
       tags: ["React-Native", "Node.js", "MongoDB"],
-      link: "https://github.com/Aditya-0510/attendance-final",
+      link: "https://github.com/Aditya-0510/geo-attendance",
     },
     {
       id: 2,
-      title: "Personal Portfolio",
+      title: "Synapse",
       description:
-        "A portfolio website showcasing skills, projects, and contact information.",
-      image: PortfolioImage,
-      tags: ["React", "Tailwind CSS"],
-      link: "#",
+        " Synapse is a full-stack content management platform that lets users organize and curate digital content (Twitter, YouTube, Notion) into shareable collections.",
+      image: SynapseImage,
+      tags: ["React", "Express.js", "MongoDB"],
+      link: "https://github.com/Aditya-0510/Synapse",
     },
     {
       id: 3,
+      title: "Chat App",
+      description:
+        " Built a real-time chat application with room-based messaging, enabling users to join, create, and interact in multiple chat rooms.",
+      image: ChatImage,
+      tags: ["React.js", "Tailwind CSS", "WebSockets"],
+      link: "https://github.com/Aditya-0510/Chat-App",
+    },
+    {
+      id: 4,
+      title: "Health Hacked",
+      description:
+        " AI-powered health assistance platform that provides personalized medical guidance, symptom analysis, and continuous care management. ",
+      image: HealthImage,
+      tags: ["React.js", "TypeScript", "Node.js"],
+      link: "https://github.com/Aditya-0510/health-hacked",
+    },
+    {
+      id: 5,
       title: "Legal Vizier",
       description:
         "A web application showcasing legal rights for users in a visual manner.",
