@@ -28,3 +28,52 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+@keyframes fire {
+  0% { opacity: 0.6; transform: scaleX(1); }
+  50% { opacity: 1; transform: scaleX(1.1); }
+  100% { opacity: 0.6; transform: scaleX(1); }
+}
+.fire-glow {
+  animation: fire 2s infinite ease-in-out;
+}
+
+@keyframes throneFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-throne {
+  animation: throneFloat 6s ease-in-out infinite;
+}
+
+@keyframes flap {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes ember {
+  0% { opacity: 0.2; transform: translateY(0px); }
+  50% { opacity: 0.5; transform: translateY(-10px); }
+  100% { opacity: 0.2; transform: translateY(0px); }
+}
+
+.ember {
+  animation: ember 4s infinite ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+@keyframes torch {
+  0% { box-shadow: 0 0 5px #7a0c0c; }
+  50% { box-shadow: 0 0 20px #a11212; }
+  100% { box-shadow: 0 0 5px #7a0c0c; }
+}
+
+button {
+  animation: torch 3s infinite ease-in-out;
+}

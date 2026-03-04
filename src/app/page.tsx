@@ -5,12 +5,14 @@ import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import SwordDivider from '@/components/SwordDivider';
 
 function App() {
   return (
     <div className="w-screen h-screen bg-white text-gray-900">
       <Navbar />
       <Hero />
+      {/* <SwordDivider /> */}
       <About />
       <Projects />
       <Skills />
