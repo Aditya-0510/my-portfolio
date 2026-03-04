@@ -289,44 +289,6 @@ const Skills = () => {
           ))}
         </motion.div>
 
-        {/* Mastery bar — decorative legend */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="mt-16 border border-[#1a1a1a] bg-[#080808] p-6 relative"
-        >
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent opacity-20" />
-          <p className="text-[10px] tracking-[0.4em] text-[#7a0c0c] uppercase text-center mb-5">
-            Current Campaign
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { label: "React Native", mastery: 78 },
-              { label: "System Design", mastery: 65 },
-              { label: "DSA", mastery: 82 },
-              { label: "DevOps", mastery: 45 },
-            ].map((item) => (
-              <div key={item.label} className="flex flex-col gap-2">
-                <div className="flex justify-between items-center">
-                  <span className="text-[10px] text-gray-500 tracking-widest">{item.label}</span>
-                  <span className="text-[10px] text-[#d4af37]">{item.mastery}%</span>
-                </div>
-                <div className="h-1 bg-[#1a1a1a] w-full relative overflow-hidden">
-                  <motion.div
-                    className="h-full bg-gradient-to-r from-[#7a0c0c] to-[#d4af37]"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${item.mastery}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1.2, delay: 0.8, ease: "easeOut" }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div> */}
-
         {/* Footer sigil */}
         <div className="mt-14 flex flex-col items-center gap-4">
           <div className="flex items-center gap-4">

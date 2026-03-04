@@ -19,7 +19,6 @@ const Navbar = () => {
     const onScroll = () => {
       setScrolled(window.scrollY > 40);
 
-      // Highlight active section
       const sections = ["about", "skills", "projects", "contact"];
       for (const id of sections.reverse()) {
         const el = document.getElementById(id);
@@ -60,11 +59,6 @@ const Navbar = () => {
             className="flex items-center gap-3 group"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            {/* Sigil diamond */}
-            {/* <div className="relative w-7 h-7 flex items-center justify-center">
-              <div className="absolute inset-0 border border-[#7a0c0c] rotate-45 group-hover:border-[#d4af37] transition-colors duration-300" />
-              <div className="absolute inset-[4px] bg-[#7a0c0c] rotate-45 group-hover:bg-[#d4af37] transition-colors duration-300" />
-            </div> */}
             <div className="flex flex-col leading-none">
               <span
                 className="text-base font-bold text-[#d4af37] tracking-widest group-hover:text-white transition-colors duration-300"
@@ -72,9 +66,6 @@ const Navbar = () => {
               >
                 Sai Aditya
               </span>
-              {/* <span className="text-[8px] tracking-[0.3em] text-[#7a0c0c] uppercase">
-                House of Code
-              </span> */}
             </div>
           </a>
 

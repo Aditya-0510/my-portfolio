@@ -1,19 +1,47 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Contact = () => {
   const [formState, setFormState] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.MouseEvent) => {
+  const handleSubmit = async (e: React.MouseEvent) => {
     e.preventDefault();
-    // wire up your actual submit logic here
+    setLoading(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          subject: "Portfolio Contact",
+          message: formState.message,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setSent(true);
+      } else {
+        console.error(data);
+        alert("Failed to send message");
+      }
+    } 
+    catch (err) {
+      console.error(err);
+      alert("Something went wrong");
+    }
+    setLoading(false);
     setSent(true);
   };
 
@@ -132,7 +160,6 @@ const Contact = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 className="flex flex-col items-center justify-center py-16 gap-6 text-center"
               >
-                <div className="text-5xl">🐦</div>
                 <p className="text-[#d4af37] text-xl tracking-widest">Raven Dispatched</p>
                 <p className="text-gray-600 text-sm tracking-wider italic">
                   Your message rides the wind. An answer shall come.
@@ -181,10 +208,18 @@ const Contact = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
                   onClick={handleSubmit}
+                  disabled={loading}
                   className="w-full py-4 border border-[#d4af37] text-[#d4af37] tracking-[0.3em] text-sm uppercase hover:bg-[#d4af37] hover:text-black transition-all duration-300"
                   style={{ boxShadow: "0 0 20px rgba(212,175,55,0.05)" }}
                 >
-                  Dispatch the Raven
+                  {loading ? (
+                    <>
+                      <span className="w-4 h-4 border-2 border-[#d4af37] border-t-transparent rounded-full animate-spin"></span>
+                      Sending...
+                    </>
+                  ) : (
+                    "Dispatch the Raven"
+                  )}
                 </motion.button>
               </div>
             )}
@@ -204,7 +239,6 @@ const Contact = () => {
               style={{ boxShadow: "inset 0 0 30px rgba(0,0,0,0.9)" }}
             >
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent opacity-20" />
-              {/* <div className="text-5xl mb-3 opacity-60">⚔️</div> */}
               <p className="text-[9px] tracking-[0.4em] text-red-500 uppercase mb-1">Sai Aditya</p>
               <p className="text-[#d4af37] text-sm tracking-widest">Open for collaboration</p>
               <div className="my-4 h-px bg-[#1a1a1a]" />

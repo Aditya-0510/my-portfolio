@@ -3,13 +3,11 @@ import photo from "@/public/photo.jpg";
 
 const About = () => {
   
-
   return (
     <section
       id="about"
       className="w-full py-28 bg-black text-gray-300 font-[Cinzel] relative overflow-hidden"
     >
-      {/* Background texture */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -70,16 +68,11 @@ const About = () => {
               <div className="absolute -top-1 -right-1 w-4 h-4 border-r-2 border-t-2 border-[#d4af37] z-20" />
               <div className="absolute -bottom-1 -left-1 w-4 h-4 border-l-2 border-b-2 border-[#d4af37] z-20" />
               <div className="absolute -bottom-1 -right-1 w-4 h-4 border-r-2 border-b-2 border-[#d4af37] z-20" />
-            </div>
-
-            {/* Stats banner */}
-            
+            </div>            
           </div>
 
           {/* Bio */}
           <div className="md:w-2/3 space-y-8">
-
-            {/* Scroll-style bio */}
             <div
               className="border border-[#2a2a2a] bg-[#080808] p-8 relative"
               style={{ boxShadow: 'inset 0 0 40px rgba(0,0,0,0.8)' }}
@@ -88,24 +81,24 @@ const About = () => {
               <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent opacity-30" />
 
               <p className="text-base leading-8 text-gray-400">
-  I&apos;m a full-stack developer who loves building{" "}
-  <span className="text-[#d4af37]">clean, scalable web applications</span>
-  {" "}— from thoughtful UIs to robust backend systems.
-</p>
+                I&apos;m a full-stack developer who loves building{" "}
+                <span className="text-[#d4af37]">clean, scalable web applications</span>
+                {" "}— from thoughtful UIs to robust backend systems.
+              </p>
 
-<div className="my-5 flex items-center gap-3">
-  <div className="h-px flex-1 bg-[#1a1a1a]" />
-  <div className="w-1 h-1 bg-[#7a0c0c] rotate-45" />
-  <div className="h-px flex-1 bg-[#1a1a1a]" />
-</div>
+              <div className="my-5 flex items-center gap-3">
+                <div className="h-px flex-1 bg-[#1a1a1a]" />
+                <div className="w-1 h-1 bg-[#7a0c0c] rotate-45" />
+                <div className="h-px flex-1 bg-[#1a1a1a]" />
+              </div>
 
-<p className="text-base leading-8 text-gray-400">
-  I work primarily with{" "}
-  <span className="text-[#d4af37]">React, Next.js, Tailwind CSS</span>
-  {" "}and{" "}
-  <span className="text-[#d4af37]">Node.js</span>
-  {" "}— and I enjoy tackling algorithmic challenges alongside product work.
-</p>
+              <p className="text-base leading-8 text-gray-400">
+                I work primarily with{" "}
+                <span className="text-[#d4af37]">React, Next.js, Tailwind CSS</span>
+                {" "}and{" "}
+                <span className="text-[#d4af37]">Node.js</span>
+                {" "}— and I enjoy tackling algorithmic challenges alongside product work.
+              </p>
 
               <div className="my-5 flex items-center gap-3">
                 <div className="h-px flex-1 bg-[#1a1a1a]" />
@@ -114,9 +107,9 @@ const About = () => {
               </div>
 
              <p className="text-base leading-8 text-gray-400">
-  Outside of work, I participate in competitive programming and
-  keep exploring new tools and technologies to stay sharp.
-</p>
+              Outside of work, I participate in competitive programming and
+              keep exploring new tools and technologies to stay sharp.
+            </p>
             </div>
 
             {/* Traits */}

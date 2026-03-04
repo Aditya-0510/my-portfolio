@@ -3,34 +3,31 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import LegalVizierImage from "@/public/Legal_Vizier_final.jpg";
-import ProxyPakkiImage from "@/public/Proxy_Pakki.jpg";
 import LearnHubImage from "@/public/LearnHubImage.png";
 import SynapseImage from "@/public/synapse.png";
 import ChatImage from "@/public/chatapp.png";
-import HealthImage from "@/public/healthhacked.png";
 
 const ProjectsPage = () => {
   const PLACEHOLDER = "https://placehold.co/600x400/0a0a0a/333333?text=Coming+Soon";
   const projects = [
     {
-    id: 1,
-    title: "LearnHub",
-    description:
-      "A full-stack course management system with Docker containerization and automated CI/CD using Jenkins.",
-    image: LearnHubImage,
-    tags: ["React.js", "Devops", "Prisma"],
-    link: "https://github.com/Aditya-0510/LearnHub",
-  },
+      id: 1,
+      title: "LearnHub",
+      description:
+        "A full-stack course management system with Docker containerization and automated CI/CD using Jenkins.",
+      image: LearnHubImage,
+      tags: ["React.js", "Devops", "Prisma"],
+      link: "https://github.com/Aditya-0510/LearnHub",
+    },
     {
-    id: 2,
-    title: "Devops API Gateway",
-    description:
-      "Production-style microservices system with API Gateway, monitoring, caching, and CI/CD.",
-    image: PLACEHOLDER,
-    tags: ["Devops", "Microservices", "CI/CD"],
-    link: "https://github.com/Aditya-0510/devops-api-gateway",
-  },
+      id: 2,
+      title: "Devops API Gateway",
+      description:
+        "Production-style microservices system with API Gateway, monitoring, caching, and CI/CD.",
+      image: PLACEHOLDER,
+      tags: ["Devops", "Microservices", "CI/CD"],
+      link: "https://github.com/Aditya-0510/devops-api-gateway",
+    },
     {
       id: 3,
       title: "Chat App",
@@ -40,24 +37,15 @@ const ProjectsPage = () => {
       tags: ["React.js", "Tailwind CSS", "WebSockets"],
       link: "https://github.com/Aditya-0510/Chat-App",
     },
-   {
-    id: 4,
-    title: "Synapse",
-    description:
-      "A full-stack content management platform that lets users organize and curate digital content (Twitter, YouTube, Notion) into shareable collections.",
-    image: SynapseImage,
-    tags: ["React", "Express.js", "MongoDB"],
-    link: "https://github.com/Aditya-0510/Synapse",
-  },
-    // {
-    //   id: 5,
-    //   title: "Legal Vizier",
-    //   description:
-    //     "A web application showcasing legal rights for users in a visual manner.",
-    //   image: LegalVizierImage,
-    //   tags: ["HTML", "CSS", "JavaScript"],
-    //   link: "https://github.com/Aditya-0510/legal-vizier",
-    // },
+    {
+      id: 4,
+      title: "Synapse",
+      description:
+        "A full-stack content management platform that lets users organize and curate digital content (Twitter, YouTube, Notion) into shareable collections.",
+      image: SynapseImage,
+      tags: ["React", "Express.js", "MongoDB"],
+      link: "https://github.com/Aditya-0510/Synapse",
+    },
   ];
 
   return (
